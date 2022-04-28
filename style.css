@@ -1,0 +1,168 @@
+body {
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  background-color: #111;
+  color: white;
+  padding: 20px 50px;
+}
+
+.navTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  background-color: gray; /* Make this a different color */
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.searchInput {
+  border: none;
+  background-color: transparent;
+}
+
+.searchInput::placeholder {
+  color: whitesmoke;
+}
+
+.limitedOffer {
+  font-size: 20px;
+  border-bottom: 2px solid gold;
+  cursor: pointer;
+}
+
+.navBottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuItem {
+  margin-right: 50px;
+  cursor: pointer;
+  color: lightblue;
+  font-weight: 400;
+}
+
+.slider {
+  background-image: url("./assets/smoke.gif");
+  background-repeat: no-repeat;
+  background-size: cover; /* or try 100vw 100vh */
+  clip-path: polygon(0% 0%, 100% 0, 100% 100%, 54% 86%, 0% 100%);
+  overflow: hidden;
+}
+
+.sliderWrapper {
+  display: flex;
+  width: 500vw;
+  transition: all 1s ease-in-out;
+}
+
+.sliderItem {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* .sliderBg {
+  width: 750px;
+  height: 750px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: lightgrey;
+} */
+
+.sliderTitle {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  color: whitesmoke;
+  z-index: 1;
+}
+
+.sliderImg {
+  z-index: 1;
+}
+
+.sliderPrice {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  font-size: 60px;
+  font-weight: 300;
+  text-align: center;
+  color: whitesmoke;
+  border: 1px solid gray;
+  z-index: 1;
+}
+
+.buyButton {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  font-size: 30px;
+  font-weight: 900;
+  color: whitesmoke;
+  border: 1px solid gray;
+  background-color: black;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.buyButton:hover {
+  background-color: white;
+  color: black;
+}
+
+.sliderItem:nth-child(1) .sliderTitle {
+  color: whitesmoke;
+}
+
+.sliderItem:nth-child(2) .sliderTitle {
+  color: rgb(227, 130, 130);
+}
+
+.sliderItem:nth-child(3) .sliderTitle {
+  color: tomato;
+}
+
+.sliderItem:nth-child(4) .sliderTitle {
+  color: rgb(109, 206, 109);
+}
+
+.sliderItem:nth-child(5) .sliderTitle {
+  color: peachpuff;
+}
+
+.sliderItem:nth-child(1) .sliderPrice {
+  color: whitesmoke;
+}
+
+.sliderItem:nth-child(2) .sliderPrice {
+  color: rgb(227, 130, 130);
+}
+
+.sliderItem:nth-child(3) .sliderPrice {
+  color: tomato;
+}
+
+.sliderItem:nth-child(4) .sliderPrice {
+  color: rgb(109, 206, 109);
+}
+
+.sliderItem:nth-child(5) .sliderPrice {
+  color: peachpuff;
+}
