@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   padding: 0;
@@ -48,14 +52,14 @@ nav {
 .menuItem {
   margin-right: 50px;
   cursor: pointer;
-  color: lightblue;
+  color: whitesmoke;
   font-weight: 400;
 }
 
 .slider {
   background-image: url("./assets/smoke.gif");
   background-repeat: no-repeat;
-  background-size: cover; /* or try 100vw 100vh */
+  background-size: cover;
   clip-path: polygon(0% 0%, 100% 0, 100% 100%, 54% 86%, 0% 100%);
   overflow: hidden;
 }
@@ -73,14 +77,6 @@ nav {
   justify-content: center;
   position: relative;
 }
-
-/* .sliderBg {
-  width: 750px;
-  height: 750px;
-  border-radius: 50%;
-  position: absolute;
-  background-color: lightgrey;
-} */
 
 .sliderTitle {
   position: absolute;
@@ -105,14 +101,13 @@ nav {
   font-weight: 300;
   text-align: center;
   color: whitesmoke;
-  border: 1px solid gray;
   z-index: 1;
 }
 
 .buyButton {
   position: absolute;
-  top: 50%;
-  right: 10%;
+  top: 55%;
+  right: 12%;
   font-size: 30px;
   font-weight: 900;
   color: whitesmoke;
@@ -132,11 +127,11 @@ nav {
 }
 
 .sliderItem:nth-child(2) .sliderTitle {
-  color: rgb(227, 130, 130);
+  color: tomato;
 }
 
 .sliderItem:nth-child(3) .sliderTitle {
-  color: tomato;
+  color: rgb(227, 130, 130);
 }
 
 .sliderItem:nth-child(4) .sliderTitle {
@@ -152,11 +147,11 @@ nav {
 }
 
 .sliderItem:nth-child(2) .sliderPrice {
-  color: rgb(227, 130, 130);
+  color: tomato;
 }
 
 .sliderItem:nth-child(3) .sliderPrice {
-  color: tomato;
+  color: rgb(227, 130, 130);
 }
 
 .sliderItem:nth-child(4) .sliderPrice {
@@ -165,4 +160,277 @@ nav {
 
 .sliderItem:nth-child(5) .sliderPrice {
   color: peachpuff;
+}
+
+.features {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.featureImg {
+  width: 50px;
+  height: 50px;
+}
+
+.featureTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 20px;
+}
+
+.featureDescription {
+  color: gray;
+  width: 50%;
+  height: 100px;
+}
+
+.product {
+  height: 100vh;
+  background-color: whitesmoke;
+  position: relative;
+  clip-path: polygon(
+    0 0,
+    54% 13%,
+    100% 0,
+    100% 100%,
+    0 99%
+  ); /* mess around with this !!!!!!!!!
+  /* clip-path: polygon(0 0, 100% 19%, 100% 100%, 0 100%); */
+}
+
+.payment {
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 10px 50px;
+  display: none;
+  flex-direction: column;
+  -webkit-box-shadow: 5px -2px 0px 5px #000000;
+  box-shadow: 5px -2px 0px 5px #a6a6a6; /* change the color or the box-shadow */
+}
+
+.payTitle {
+  font-size: 20px;
+  color: rgb(103, 103, 248);
+}
+
+label {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.payInput {
+  padding: 10px;
+  margin: 10px 0px;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+.payInput::placeholder {
+  color: rgb(143, 143, 143);
+}
+
+.cardIcons {
+  display: flex;
+}
+
+.cardIcon {
+  margin-right: 10px;
+}
+
+.cardInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.payButton {
+  position: absolute;
+  height: 40px;
+  bottom: -40px;
+  width: 100%;
+  left: 0;
+  -webkit-box-shadow: 5px -2px 0px 5px #000000;
+  box-shadow: 5px -2px 0px 5px #a6a6a6;
+  background-color: #369e62;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.sm {
+  width: 30%;
+}
+
+.close {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-color: white;
+  color: red;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 2px;
+}
+
+.productImg {
+  width: 40%;
+}
+
+.productDetails {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  width: 40%;
+  padding: 50px;
+}
+
+.productTitle {
+  font-size: 75px;
+  font-weight: 900;
+}
+
+.productDescription {
+  font-style: 24px;
+  color: gray;
+}
+
+.colors,
+.sizes {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.color {
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  background-color: black;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.color:last-child {
+  background-color: darkblue;
+}
+
+.size {
+  padding: 5px 20px;
+  border: 1px solid black;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.productButton {
+  float: right;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.productButton:hover {
+  background-color: whitesmoke;
+  color: black;
+}
+
+.gallery {
+  padding: 50px;
+  display: flex;
+}
+
+.galleryItem {
+  flex: 1;
+  padding: 50px;
+}
+
+.galleryImg {
+  width: 100%;
+  border: 6px solid rgb(26, 26, 26);
+}
+
+.galleryTitle {
+  text-align: center;
+  color: lightblue;
+  text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+}
+
+footer {
+  display: flex;
+}
+
+.footerLeft {
+  flex: 2;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.footerTitle {
+  font-size: 16px;
+}
+
+.footerList {
+  padding: 0;
+  list-style: none;
+}
+
+.fListItem {
+  cursor: pointer;
+  margin-bottom: 10px;
+  color: gray;
+}
+
+.footerRight {
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fInput {
+  padding: 5px;
+}
+
+.fButton {
+  padding: 5px;
+  background-color: black;
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+.footerIcons {
+  display: flex;
+}
+
+.footerIcon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.copyright {
+  font-weight: 300;
+  font-size: 14px;
 }
